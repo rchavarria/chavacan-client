@@ -25,6 +25,11 @@ describe('Controller: NavbarCtrl', function () {
 
   it('should return false when location does not match', function () {
     mockLocation.path('/');
-    expect(scope.isActive('/foo')).toBeTruthy();
+    expect(scope.isActive('/foo')).toBeFalsy();
+  });
+
+  it('should return false although when location matches in a local path', function () {
+    mockLocation.path('/#/');
+    expect(scope.isActive('/')).toBeFalsy();
   });
 });
