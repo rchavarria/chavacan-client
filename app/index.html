@@ -25,10 +25,10 @@
     <![endif]-->
 
     <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#/about">About</a></li>
-        <li><a ng-href="#/contact">Contact</a></li>
+      <ul class="nav nav-pills pull-right" ng-controller="NavbarCtrl">
+        <li ng-class="{active: isActive('/')}"><a ng-href="#">Home</a></li>
+        <li ng-class="{active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+        <li ng-class="{active: isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
       </ul>
       <h3 class="text-muted">chavacan client</h3>
     </div>
@@ -67,6 +67,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/navbar.js"></script>
         <!-- endbuild -->
 </body>
 </html>
