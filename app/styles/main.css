@@ -77,3 +77,8 @@ body {
     border-bottom: 0;
   }
 }
+
+.img-header {
+  width: 966px;
+  margin: 0 auto;
+}

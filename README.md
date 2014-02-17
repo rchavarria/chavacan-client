@@ -6,12 +6,21 @@ Client side of ChavaCan project
 # Requirements
 
 - [node](http://nodejs.org)
+- git
 
 # How to set up development environment
 
-Run the command:
+Run the commands:
 
-	npm install
+    git clone <github repository for chavacan client>
+    cd chavacan-client
+    npm install yo bower grunt generator-angular
+    npm install
+    bower install
+
+Now, you can run it with
+    
+    grunt serve
 
 # Backlog
 
