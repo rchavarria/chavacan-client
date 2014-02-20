@@ -7,6 +7,17 @@ describe('Navigation Bar', function() {
     expect(element('.nav li:nth-child(1)').attr('class')).toContain('active'); 
     expect(element('.nav li:nth-child(2)').attr('class')).not().toBeDefined();
     expect(element('.nav li:nth-child(3)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
+  });
+
+  it('selects "Alquileres" if location is /rentings', function() { 
+    browser().navigateTo('/#/rentings'); 
+    expect(browser().location().path()).toBe('/rentings');
+
+    expect(element('.nav li:nth-child(1)').attr('class')).not().toBeDefined();
+    expect(element('.nav li:nth-child(2)').attr('class')).toContain('active'); 
+    expect(element('.nav li:nth-child(3)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
   });
 
   it('selects "About" if location is /about', function() { 
@@ -14,8 +25,9 @@ describe('Navigation Bar', function() {
     expect(browser().location().path()).toBe('/about');
 
     expect(element('.nav li:nth-child(1)').attr('class')).not().toBeDefined();
-    expect(element('.nav li:nth-child(2)').attr('class')).toContain('active'); 
-    expect(element('.nav li:nth-child(3)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(2)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(3)').attr('class')).toContain('active'); 
+    expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
   });
 
   it('selects "Contact" if location is /contact', function() { 
@@ -24,6 +36,7 @@ describe('Navigation Bar', function() {
     expect(browser().location().path()).toBe('/contact'); 
     expect(element('.nav li:nth-child(1)').attr('class')).not().toBeDefined();
     expect(element('.nav li:nth-child(2)').attr('class')).not().toBeDefined(); 
-    expect(element('.nav li:nth-child(3)').attr('class')).toContain('active'); 
+    expect(element('.nav li:nth-child(3)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(4)').attr('class')).toContain('active'); 
   });
 });
