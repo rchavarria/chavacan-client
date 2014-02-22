@@ -16,6 +16,10 @@ angular.module('chavacanClientApp', [
         templateUrl: 'views/rentings.html',
         controller: 'MainCtrl'
       })
+      .when('/sales', {
+        templateUrl: 'views/sales.html',
+        controller: 'MainCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'MainCtrl'
