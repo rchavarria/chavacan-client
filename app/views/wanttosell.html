@@ -1,1 +1,92 @@
-<p>This is the wanttosell view.</p>
+
+<div class="art-postcontent">
+  <h3><strong>&iquest;Desea vender o alquilar una propiedad?</strong>
+  </h3>
+  <p>&nbsp;</p>
+  <p>Si necesita vender nosotros le ayudamos.&nbsp; Le hacemos una valoraci&oacute;n gratuita de su  vivienda y ponemos su vivienda a la venta en todos nuestros canales de venta: </p>
+  <p>&nbsp;</p>
+  <p align="left"> <span>
+  </span></p>
+  <form action="quierevender.php" method="post" name="FormPedido" id="FormPedido"  onsubmit="return Verifica(this);">
+    <table width="97%" border="0" align="center" bgcolor="#EAEAEA" class="textoFicha">
+      <tr>
+        <td height="17" colspan="2" bgcolor="#000000"><span class="blanco Estilo11 Estilo3">Datos  personales</span></td>
+      </tr>
+      <tr class="titbuscador">
+        <td height="24">Nombre y Apellidos </td>
+        <td width="66%"><input name="nombre" type="text" class="acceso" id="nombre" style="width: 300px;" /></td>
+      </tr>
+      <tr>
+        <td height="11" class="mnu_noexiste">Direcci&oacute;n</td>
+        <td width="66%"><input name="direccion" type="text" class="acceso" id="direccion" style="width: 300px;" /></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">Poblaci&oacute;n</td>
+        <td width="66%"><input name="poblacion" type="text" class="acceso" id="poblacion" style="width: 300px;" /></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">C&oacute;digo Postal </td>
+        <td width="66%"><input name="cp" type="text" class="acceso" id="cp" style="width: 70px;" /></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">Tel&eacute;fono 1 (*) </td>
+        <td width="66%"><input name="telefono1" type="text" class="acceso" id="telefono1" style="width: 100px;" /></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">Tel&eacute;fono 2 </td>
+        <td width="66%"><input name="telefono2" type="text" class="acceso" id="telefono2" style="width: 100px;" /></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">Mail</td>
+        <td width="66%"><input name="mail" type="text" class="acceso" id="mail" style="width: 300px;" /></td>
+      </tr>
+      <tr>
+        <td height="17" colspan="2" bgcolor="#000000"><span class="blanco Estilo11 Estilo3">Datos del inmueble </span></td>
+      </tr>
+      <tr>
+        <td height="24" class="mnu_noexiste"><p>R&eacute;gimen</p></td>
+        <td width="66%"><select name="regimen" class="acceso" id="regimen" style="width: 135px;">
+          <option value="Venta">Venta</option>
+          <option value="Alquiler">Alquiler</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">Tipo</td>
+        <td width="66%"><select name="tipo" class="acceso" id="tipo" style="width: 135px;">
+          <option value="Piso" selected="selected">Piso</option>
+          <option value="Casa">Casa</option>
+          <option value="Terreno">Terreno</option>
+          <option value="Nave">Nave</option>
+          <option value="Despacho">Despacho</option>
+          <option value="Local">Local</option>
+          <option value="Parking">Parking</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">Poblaci&oacute;n</td>
+        <td width="66%"><input name="poblacion2" type="text" class="acceso" id="poblacion2" style="width: 300px;" /></td>
+      </tr>
+      <tr>
+        <td class="mnu_noexiste">Descripci&oacute;n</td>
+        <td width="66%"><textarea name="descripcion" cols="45" rows="5" class="acceso" id="descripcion"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="mnu_noexiste"><p>&nbsp;</p>
+          <p>NOTA: De conformidad con lo establecido en la Ley 15/99 de Protecci&oacute;n   de Datos, se le informa que sus datos ser&aacute;n registrados inform&aacute;ticamente para   cumplir con la finalidad para la que nos contrata (vender, comprar o financiar   un inmueble) y que podr&aacute; ejercitar sus derechos de acceso, rectificaci&oacute;n,   oposici&oacute;n y cancelaci&oacute;n.</p>
+          <p>&nbsp;</p>
+          <p>
+            <input onclick="CambiarEnviar()" type="checkbox" name="check">
+            He le&iacute;do y   acepto las condiciones que se mencionan anteriormente</input></p>
+            <p>&nbsp;</p></td>
+          </tr>
+          <tr>
+            <td height="22" colspan="2"><div align="center"><span style="text-align: center;">
+              <input name="enviar" type="submit" class="btnamarillo" id="enviar" value="enviar" />
+            </span></div></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+      </form>
+
+      <p></p>
+    </div>                                      
