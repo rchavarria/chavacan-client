@@ -10,6 +10,7 @@ describe('Navigation Bar', function() {
     expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(5)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(6)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(7)').attr('class')).not().toBeDefined();
   });
 
   it('selects "Alquileres" if location is /rentings', function() { 
@@ -22,6 +23,7 @@ describe('Navigation Bar', function() {
     expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(5)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(6)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(7)').attr('class')).not().toBeDefined();
   });
 
   it('selects "Ventas" if location is /sales', function() { 
@@ -34,6 +36,7 @@ describe('Navigation Bar', function() {
     expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(5)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(6)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(7)').attr('class')).not().toBeDefined();
   });
 
   it('selects "Servicios Inmoviliarios" if location is /services', function() { 
@@ -46,6 +49,20 @@ describe('Navigation Bar', function() {
     expect(element('.nav li:nth-child(4)').attr('class')).toContain('active'); 
     expect(element('.nav li:nth-child(5)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(6)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(7)').attr('class')).not().toBeDefined();
+  });
+
+  it('selects "Quiere vender" if location is /wanttosell', function() { 
+    browser().navigateTo('/#/wanttosell'); 
+    expect(browser().location().path()).toBe('/wanttosell');
+
+    expect(element('.nav li:nth-child(1)').attr('class')).not().toBeDefined();
+    expect(element('.nav li:nth-child(2)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(3)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(5)').attr('class')).toContain('active'); 
+    expect(element('.nav li:nth-child(6)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(7)').attr('class')).not().toBeDefined();
   });
 
   it('selects "About" if location is /about', function() { 
@@ -56,8 +73,9 @@ describe('Navigation Bar', function() {
     expect(element('.nav li:nth-child(2)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(3)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
-    expect(element('.nav li:nth-child(5)').attr('class')).toContain('active'); 
-    expect(element('.nav li:nth-child(6)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(5)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(6)').attr('class')).toContain('active'); 
+    expect(element('.nav li:nth-child(7)').attr('class')).not().toBeDefined();
   });
 
   it('selects "Contact" if location is /contact', function() { 
@@ -69,6 +87,7 @@ describe('Navigation Bar', function() {
     expect(element('.nav li:nth-child(3)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(4)').attr('class')).not().toBeDefined(); 
     expect(element('.nav li:nth-child(5)').attr('class')).not().toBeDefined(); 
-    expect(element('.nav li:nth-child(6)').attr('class')).toContain('active'); 
+    expect(element('.nav li:nth-child(6)').attr('class')).not().toBeDefined(); 
+    expect(element('.nav li:nth-child(7)').attr('class')).toContain('active'); 
   });
 });
