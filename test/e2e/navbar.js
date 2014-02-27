@@ -1,7 +1,9 @@
 describe('Navigation Bar', function() { 
 
   var checkActive = function (tabIndex) {
-    for(var i = 1; i < totalTabs; i++) {
+    var totalTabs = 8;
+
+    for(var i = 1; i <= totalTabs; i++) {
       var elementSelector = '.nav li:nth-child(' + i + ')';
       if (i === tabIndex) {
         expect(element(elementSelector).attr('class')).toContain('active');
@@ -46,17 +48,24 @@ describe('Navigation Bar', function() {
     checkActive(5);
   });
 
+  it('selects "Destacados" if location is /highlights', function() { 
+    browser().navigateTo('/#/highlights'); 
+    expect(browser().location().path()).toBe('/highlights');
+
+    checkActive(6);
+  });
+
   it('selects "About" if location is /about', function() { 
     browser().navigateTo('/#/about'); 
     expect(browser().location().path()).toBe('/about');
 
-    checkActive(6);
+    checkActive(7);
   });
 
   it('selects "Contact" if location is /contact', function() { 
     browser().navigateTo('/#/contact'); 
     expect(browser().location().path()).toBe('/contact');
 
-    checkActive(7);
+    checkActive(8);
   });
 });
