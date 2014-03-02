@@ -1,1 +1,176 @@
-<p>This is the financing view.</p>
+<div class="art-postcontent">
+ <h3><strong>Calculadora Hipotecaria</strong>
+
+
+   <SCRIPT language="JavaScript">
+   <!--
+   function checkForZero(field)
+   {
+    if (field.value == 0 || field.value.length == 0) {
+      alert ("This field can't be 0!");
+      field.focus(); }
+      else
+        calculatePayment(field.form);
+    }
+
+    function cmdCalc_Click(form)
+    {
+      debugger;
+      if (form.price.value == 0 || form.price.value.length == 0) {
+        alert ("The Price field can't be 0!");
+        form.price.focus(); }
+        else if (form.ir.value == 0 || form.ir.value.length == 0) {
+          alert ("The Interest Rate field can't be 0!");
+          form.ir.focus(); }
+          else if (form.term.value == 0 || form.term.value.length == 0) {
+            alert ("The Term field can't be 0!");
+            form.term.focus(); }
+            else
+              calculatePayment(form);
+          }
+
+          function calculatePayment(form)
+          {
+            princ = form.price.value - form.dp.value;
+            intRate = (form.ir.value/100) / 12;
+            months = form.term.value * 12;
+            form.pmt.value = Math.floor((princ*intRate)/(1-Math.pow(1+intRate,(-1*months)))*100)/100;
+            form.principle.value = princ;
+            form.payments.value = months;
+          }
+//-->
+</SCRIPT>                                                     
+</h3>
+<table width="100%" border="0">
+ <tr>
+   <td><p class="caja2">&nbsp;</p>
+     <p align="justify" class="caja2">Calcula los 
+       pagos mensuales de la hipoteca de un inmueble. Los simuladores de hipotecas te ayudan a 
+       calcular la cuota mensual que vas a pagar. Utiliza 
+       nuestro simulador de hipoteca para saber la cuota 
+       mensual que vas a pagar por tu hipoteca.<br />
+     </p>
+     <p align="justify" class="caja2">&nbsp;</p>
+     <p align="justify" class="caja2">Gracias por utilizar nuesto 
+       simulador de hipotecas: La simulaci&oacute;n de la hipoteca o 
+       c&aacute;culo de la cuota mensual se consigue mediante la 
+       f&oacute;rmula llamada pr&eacute;stamo frances, que es la que se 
+       aplica al 90 % de las hipotecas en Espa&ntilde;a.</p>
+       <p align="justify" class="caja2"><br />
+       </p>
+       <table align="left">
+         <tbody>
+           <tr>
+             <td valign="top"></td>
+             <td align="right">
+               <table>
+                 <tbody>
+                   <tr>
+                     <td valign="top"><form name="MortgageMinder" id="MortgageMinder">
+                       <table width="292" border="1" 
+                       cellpadding="2" bgcolor="silver" class="price">
+                       <tbody>
+                         <tr>
+                           <td align="center" colspan="2"><b><font color="blue" 
+                            size="+2" class="art-postheader">SIMULADOR HIPOTECAS</font></b></td>
+                          </tr>
+                          <tr>
+                           <td width="50%" colspan="2"><table border="0" cellpadding="2">
+                             <tbody>
+                               <tr>
+                                 <td colspan="2"><b>Datos:</b></td>
+                               </tr>
+                               <tr>
+                                 <td align="right">Precio del inmueble:</td>
+                                 <td><input name="price" onblur="checkForZero(this)" 
+                                  onchange="checkForZero(this)" type="text" size="7" 
+                                  value="120000" /></td>
+                                </tr>
+                                <tr>
+                                 <td align="right">Pago de Entrada:</td>
+                                 <td><input name="dp" onchange="calculatePayment(this.form)" 
+                                  type="text" size="7" value="0" /></td>
+                                </tr>
+                                <tr>
+                                 <td align="right">Interes Anual:</td>
+                                 <td><input name="ir" onblur="checkForZero(this)" 
+                                  onchange="checkForZero(this)" type="text" size="4" 
+                                  value="4.90" />
+                                  % </td>
+                                </tr>
+                                <tr>
+                                 <td align="right">Periodo:</td>
+                                 <td><input name="term" onblur="checkForZero(this)" 
+                                  onchange="checkForZero(this)" type="text" size="4" 
+                                  value="25" />
+                                  A&ntilde;os </td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                          </tr>
+                          <tr>
+                           <td><table border="0" cellpadding="2">
+                             <tbody>
+                               <tr>
+                                 <td colspan="2"><b>Resultados:</b></td>
+                               </tr>
+                               <tr>
+                                 <td align="right">Cantidad a hipotecar:</td>
+                                 <td><input name="principle" type="text" 
+                                  size="7" /></td>
+                                </tr>
+                                <tr>
+                                 <td align="right">Numero de pagos:</td>
+                                 <td><input name="payments" type="text" size="7" /></td>
+                               </tr>
+                               <tr>
+                                 <td align="right">Pago mensual:</td>
+                                 <td><input name="pmt" type="text" size="7" /></td>
+                               </tr>
+                             </tbody>
+                           </table></td>
+                         </tr>
+                         <tr>
+                           <td align="center" colspan="2"><input name="cmdCalc" onclick="cmdCalc_Click(this.form)" type="button" value="Calcular Hipoteca" /></td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </form></td>
+                 </tr>
+               </tbody>
+             </table>
+             <!--finaki--></td>
+           </tr>
+           <tr></tr>
+         </tbody>
+       </table>
+       <p align="justify">                                                           Con 
+         nuestro simulador de hipoteca no necesitas hacer 
+         c&aacute;lculos complejos. Te mostramos la f&oacute;rmula del pr&eacute;stamo 
+         fr&aacute;nces que hace nuestro simulador de hipotecas para tu 
+         informaci&oacute;n:</p>
+         <p>&nbsp;</p>
+         <p align="center"><br />
+           <br />
+           <img src="images/financing/mortgage-calculation.png" width="317" />                                                         </p>
+           <p>&nbsp;</p>
+           <p align="center"><img src="images/financing/calc.jpg" width="216" height="177" /></p>
+           <p class="caja2">&nbsp; </p></td>
+         </tr>
+       </table>
+       <p>&nbsp;</p>
+       <p align="center">&nbsp;</p>  
+
+
+     </div>
+   </td>
+ </tr>
+</table>
+<p align="center"><br />
+</p>
+<p align="center"></p></td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+</table>
