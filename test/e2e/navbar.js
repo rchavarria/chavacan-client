@@ -55,17 +55,24 @@ describe('Navigation Bar', function() {
     checkActive(6);
   });
 
+  it('selects "Financiación" if location is /financing', function() { 
+    browser().navigateTo('/#/financing'); 
+    expect(browser().location().path()).toBe('/financing');
+
+    checkActive(7);
+  });
+
   it('selects "About" if location is /about', function() { 
     browser().navigateTo('/#/about'); 
     expect(browser().location().path()).toBe('/about');
 
-    checkActive(7);
+    checkActive(8);
   });
 
   it('selects "Contact" if location is /contact', function() { 
     browser().navigateTo('/#/contact'); 
     expect(browser().location().path()).toBe('/contact');
 
-    checkActive(8);
+    checkActive(9);
   });
 });
