@@ -62,17 +62,10 @@ describe('Navigation Bar', function() {
     checkActive(7);
   });
 
-  it('selects "About" if location is /about', function() { 
-    browser().navigateTo('/#/about'); 
-    expect(browser().location().path()).toBe('/about');
-
-    checkActive(8);
-  });
-
   it('selects "Contact" if location is /contact', function() { 
     browser().navigateTo('/#/contact'); 
     expect(browser().location().path()).toBe('/contact');
 
-    checkActive(9);
+    checkActive(8);
   });
 });
