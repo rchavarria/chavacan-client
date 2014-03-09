@@ -85,6 +85,8 @@
     "node": ">=0.10.16"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "node_modules/.bin/bower install",
+    "DEBUG_postinstall": "node_modules/.bin/bower install;node_modules/.bin/grunt server:dist"
   }
 }
