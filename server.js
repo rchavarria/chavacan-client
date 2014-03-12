@@ -6,4 +6,4 @@ app.use(express.compress());
 
 app.use(express.static(__dirname + '/dist'));
 
-app.listen(process.env.PORT || 9000);
+app.listen(process.env.PORT || 80);
