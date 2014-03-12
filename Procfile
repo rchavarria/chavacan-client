@@ -1,1 +1,1 @@
-web: node node_modules/.bin/grunt serve:dist
+web: node server.js
